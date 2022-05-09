@@ -21,16 +21,14 @@ public class Hotel {
 
         for(String day : days){
             switch(day){
-                // in case it is a weekend day
                 case "sat":
                 case "sun":
                     price += clientType.equals("Regular") ? regularWeekendPrice : rewardWeekendPrice;
                     break;
-                // in case it is weekday
                 default:
                     price += clientType.equals("Regular") ? regularWeekdayPrice : rewardWeekdayPrice;
-            }// end of switch
-        }// end for
+            }
+        }
         return price;
     }
 

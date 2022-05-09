@@ -28,7 +28,7 @@ public class HotelReservation {
             if (character == ':') 
                 break;
             clientType += character;
-        }// end for
+        }
         return clientType;
     }
 
@@ -36,18 +36,17 @@ public class HotelReservation {
         String[] days = new String[3];
         int dayIndex = 0;
 
-        // threre's no need to start the i with 0
         for(int i=7; i < input.length; i++) {
             if(input[i] == '('){
-                i++; // goes to the next char, that is the first char of the day string
+                i++; 
                 days[dayIndex] = "";
                 while (input[i] != ')'){
                     days[dayIndex] += input[i];
                     i++;
-                }//end while
+                }
                 dayIndex++;
-            }//end if
-        }//end for
+            }
+        }
 
         return days;
     }
